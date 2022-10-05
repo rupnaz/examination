@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ebebeb;
+}
+
+h1, h2{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    font-family: sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    color: black;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.wrapper{
+    padding: 4rem 0;
+}
+
+.wrapper__inner{
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "welcome welcome welcome welcome welcome welcome"
+    "menu menu menu menu menu menu"
+    "about about about about about about"
+    "footer__start footer__start footer__start footer__start footer__start footer__start";
+}
+
+.welcome{
+    grid-area: welcome;
+    background-image: url(assets/logo/bonz.ai-logo-color-landscape.png);
+    background-size: 20%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    height: 15rem;
+    background-color: rgb(12, 136, 109);
+}
+
+.welcome__inner{
+    margin: 4rem  auto;
+    text-align: center;
+}
+
+.welcome h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.welcome p{
+    padding: 4rem;
+}
+
+.menu{
+    grid-area: menu;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(13, 121, 97);
+    padding: 0 6rem
+}
+
+a{
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    padding: 1rem;
+    opacity: 0.5;
+
+}
+a:hover{
+    transform: scale(1.4); 
+    opacity: 1;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: about;
+    background-color: rgb(12, 136, 109);
+    padding: 5rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+.about img{
+    margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+}
+
+.about__first{
+    grid-column: span 2 / span 2;
+}
+
+.about__txt{
+    grid-column: span 4/ span 4;
+}
+
+.footer__start{
+    text-align: center;
+    display: flex;
+    grid-area: footer__start;
+    background-color: rgb(13, 121, 97);
+    padding: 2rem;
+}
+
+.footer__start h2{
+    color: rgb(0, 0, 0);
+    opacity: 50%;
+    margin-top: 0.5rem;
+}
+
+.footer__start p{
+    font-size: 12px;
+    padding: 0 1rem;
+}
