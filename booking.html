@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -15,33 +12,59 @@
         <div class="wrapper__inner">
             <header class="welcome">
                 <div class="welcome__inner">
-                    <h1>Welcome to Bonzai!</h1>
+                    <h1>How to book</h1>
                 </div>
             </header>
 
             <nav class="menu">
-                <a href="home.html">Home</a>
+                <a href="Home.html">Home</a>
                 <a href="#">Contact</a>
-                <a href="booking.html">Booking</a>
-                <a href="facilities.html">Facilities</a>
+                <a href="Booking.html">Booking</a>
+                <a href="Facilities.html">Facilities</a>
             </nav>
 
             <article class="about">
-                <section class="about__first">
-                    <img src="assets/photos/01-day.jpg" alt="day">
-                    <h2>Day</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam qui fuga provident voluptas unde? Et neque perspiciatis, quo asperiores nostrum, fuga illo repudiandae voluptate tenetur, quam exercitationem saepe voluptates accusamus?</p>
+                <section class="about__first--location">
+                    <div>
+                        <label for="location">Location</label>
+                    </div>
+                    
+                    <div>
+                        <input (type='text', name='location' placeholder='Göteborg, GBG')>
+                    </div>
                 </section>
-                <section class="about__first">
-                    <img src="assets/photos/01-night.jpg" alt="day">
-                    <h2>Night</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam qui fuga provident voluptas unde? Et neque perspiciatis, quo asperiores nostrum, fuga illo repudiandae voluptate tenetur, quam exercitationem saepe voluptates accusamus?</p>
-                </section>
+                
                 <section class="about__txt">
-                    <h2>About us</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta molestiae recusandae suscipit architecto temporibus non voluptatum sint sequi nostrum possimus pariatur, consequatur dolorum ex at voluptatem dolorem excepturi mollitia ratione?         
-                    </p>
+                    <form>
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname">
+                    </form>
                 </section>
+
+                <section class="booking__date">
+                    <div>
+                        <label for="date">Arrival</label>
+                    </div>
+
+                    <div>
+                        <input id="date" name='Arrival' type="text" onfocus="this.type='date'" onblur="this.type='text'" placeholder="10/03/2016">
+                    </div>
+
+                    <div>
+                        <label for="date">Departure</label>
+                    </div>
+                    <div>
+                        <input id="date" (name='departure' type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="05/11/2016")>    
+                    </div>
+
+                    <button>BOOK NOW</button>
+
+                </section>
+
+
+
             </article>
             <footer class="footer__start">
                 <article class="Contact">

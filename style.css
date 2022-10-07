@@ -5,15 +5,17 @@
 
 body{
     background-color: #ebebeb;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1, h2{
+    font-weight: 250;
     margin: 0;
+    line-height: 1.5;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 p{
-    font-family: sans-serif;
     line-height: 1.5;
     margin: 0;
     color: black;
@@ -26,7 +28,7 @@ img{
 }
 
 .wrapper{
-    padding: 4rem 0;
+    padding: 2rem;
 }
 
 .wrapper__inner{
@@ -48,9 +50,9 @@ img{
     grid-area: welcome;
     background-image: url(assets/logo/bonz.ai-logo-color-landscape.png);
     background-size: 20%;
-    background-position: top left;
+    background-position: top 10% left 5%;
     background-repeat: no-repeat;
-    height: 15rem;
+    padding: 2rem;
     background-color: rgb(12, 136, 109);
 }
 
@@ -74,7 +76,7 @@ img{
     display: flex;
     justify-content: space-between;
     background-color: rgb(13, 121, 97);
-    padding: 0 6rem
+    padding: 0 6rem;
 }
 
 a{
@@ -106,12 +108,44 @@ a:hover{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
 }
 
+img:hover{
+    transform: scale(1.4); 
+    opacity: 1;
+}
+
 .about__first{
     grid-column: span 2 / span 2;
 }
 
+.about__first--location{
+    grid-column: span 4 / span 2;
+}
+
+.about__facilities{
+    grid-column: span 2/ span 2;
+}
+
 .about__txt{
     grid-column: span 4/ span 4;
+}
+
+.booking__date{
+    grid-column: span 4/ span 4;
+}
+
+.booking__date button{
+    margin-top: 3rem;
+    border: none;
+    background-color: rgb(182, 199, 174);
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+    color: #ebebeb;
+}
+
+.booking__date button:hover{
+    transform: scale(1.4); 
+    opacity: 1;
 }
 
 .footer__start{
@@ -131,4 +165,16 @@ a:hover{
 .footer__start p{
     font-size: 12px;
     padding: 0 1rem;
+}
+
+@media screen and (max-width:650px)
+{
+
+    .menu{
+        flex-direction: column;
+        padding: 0 4rem;
+    }
+    .menu a{
+        font-size: 20px;
+    }
 }
