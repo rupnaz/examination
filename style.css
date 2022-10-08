@@ -8,11 +8,22 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2{
+h1,h2{
     font-weight: 250;
     margin: 0;
     line-height: 1.5;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+h1{
+    font-weight: 250;
+    font-size: 3rem;
+}
+
+h2{
+    font-weight: bold;
+    margin: 0;
 }
 
 p{
@@ -25,6 +36,8 @@ img{
     width: 100%;
     height: auto;
     vertical-align: middle;
+    transition-timing-function: ease-in-out;
+    transition: 500ms;
 }
 
 .wrapper{
